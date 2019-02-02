@@ -1,0 +1,107 @@
+.bg-dark {
+	background-color: Black !important;
+}
+
+h1.normal {
+	font-family: "URW Chancery L", cursive;
+	color: white;
+}
+
+h1 {
+	color: white;
+}
+
+body {
+	background-color: black;
+}
+
+p {
+	color: white;
+}
+
+nav img {
+	height: 30px;
+}
+
+img {
+	max-width: 100%;
+}
+
+.aboutContainer {
+	width: 1000px ;
+  max-width: 100% ;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+.myImage {
+  float:left;
+  height: 512px;
+  max-height: 100%;
+  font-family: Veranda;
+}
+.heading {
+  float:left;
+	margin-left:2em;
+}
+
+.reviewsText {
+	text-align:center;
+	font-weight:bold;
+}
+
+.footer {
+	position:fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* The Masonry Container */
+.masonry {
+  margin: 1.5em auto;
+  max-width: 1000px;
+  column-gap: 1.5em;
+}
+
+/* The Masonry Brick */
+.item {
+	background-color: black;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .masonry {
+    column-count: 2;
+  }
+}
