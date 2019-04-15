@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <title>WHO HE PLAY FOR</title>
+</head>
+
+<body>
+  <h1>WHO HE PLAY FOR?!?!</h1>
+  <br><br>
+  <div id="app">
+    <div v-if="loading">
+      <p>Loading...</p>
+    </div>
+    <div v-else>
+      <p>This is the simple game where you get to guess which NBA team the current player plays for.
+      <br>Test your knowledge and leave a comment letting us know how you did.
+      <br>Photos are still being developed, so you will have to go by the name for now</p>
+      <br>
+      <h2>{{player.first_name}} {{player.last_name}}</h2>
+      <br>
+      <h3 v-if="showPlayer">{{player.team.name}}</h3>
+      <p><button v-on:click="showTeam">Show Team</button></p>
+      <br>
+      <p>
+        <button v-on:click="firstComic">First</button>
+        <button v-on:click="previousComic">Previous</button>
+        <button v-on:click="nextComic">Next</button>
+        <button v-on:click="lastComic">Last</button>
+        <button v-on:click="randomComic">Random</button>
+      </p>
+      <h3>Add a Comment</h3>
+      <form v-on:submit.prevent="addComment">
+        <input v-model="addedName" placeholder="Name"></p>
+        <textarea v-model="addedComment"></textarea>
+        <br />
+        <button type="submit">Comment</button>
+      </form>
+      <h3>Comments</h3>
+      <div v-for="comment in comments[number]">
+        <hr>
+        <p>{{comment.text}}</p>
+        <p><i>-- {{comment.author}}</i></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+<div class="footer">
+  <p>
+    <hr>
+  </label>McKay Wilkerson</p>
+  <a href="https://github.com/mckaywilkerson/portfolio/tree/master/cp3">
+    Github Repository</a>
+</div>
+
+</html>
